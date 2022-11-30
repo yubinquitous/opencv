@@ -19,9 +19,12 @@ def main():
         return
 
     gray = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
-    # _, img_bin = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU) # 이진화
-    img_bin = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 61, 5)  # 적응형 이진화
-
+    # _, img_bin = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)  # 이진화
+    img_bin = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 51, 4)  # 적응형 이진화
+    # morphologyEx
+    img_bin = cv2.morphologyEx(img_bin, cv2.MORPH_GRADIENT, None)
+    # img_bin = cv2.morphologyEx(img_bin, cv2.MORPH_CLOSE, None)
+    # img_bin = cv2.Canny(gray, 100, 300)  # Canny Edge
     contours, _ = cv2.findContours(img_bin, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
     for pts in contours:
@@ -32,9 +35,6 @@ def main():
 
         vtc = len(approx)
 
-        print('vtc: ', vtc)
-        if vtc == 3:
-            continue
         if vtc == 4:
             setLabel(src, pts, 'RECT')
         else:
