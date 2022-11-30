@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="037cf6b0-0320-4d50-8593-82b2434adeed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Assignment2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/contour.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/blue_dices.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case3/img3_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case3/img3_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case3/img3_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case3/img3_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case4/img4_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case4/img4_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case4/img4_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case4/img4_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case4/img4_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case4/img4_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case4/img4_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case5/img5_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case5/img5_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case5/img5_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case5/img5_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case5/img5_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case5/img5_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case5/img5_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case5/img5_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case5/img5_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case5/img5_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/case5/img5_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/dice1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/dice5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/dice7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/dice9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/dices.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/rotate_dices.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/white_dice.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/white_dice4.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2I7pVfSMCZx01YBcQhuE0kV0tfs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/yubin/PycharmProjects/Assignment2/images",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="1" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Assignment2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="037cf6b0-0320-4d50-8593-82b2434adeed" name="Changes" comment="" />
+      <created>1669542500635</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669542500635</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
