@@ -1,9 +1,16 @@
 import math as math
 import cv2 as cv2
 
+# def set_label(img, pts, label):
+#     (x, y, w, h) = cv2.boundingRect(pts)
+#     pt1 = (x, y)
+#     pt2 = (x + w, y + h)
+#     cv2.rectangle(img, pt1, pt2, (255, 255, 0), 1)
+#     cv2.putText(img, label, pt1, cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 255))
 
-def main():
-    src = cv2.imread('images/rotate_dices.png', cv2.IMREAD_COLOR)
+def find_eyes(i):
+    file_name = 'images/case3/img3_' + str(i) + '.png'
+    src = cv2.imread(file_name, cv2.IMREAD_COLOR)
 
     if src is None:
         print('Image load failed!')
@@ -34,11 +41,22 @@ def main():
 
             if ratio > 0.8:
                 circles[count] += 1
+                # set_label(src, pts, 'CIR') #test
 
     circles.sort()
-    for i in circles:
-        if i != 0:
-            print(i)
+    for j in circles:
+        if j != 0:
+            print(j)
+
+    cv2.imshow('src' + str(i), src)
+    cv2.imshow('img_bin' + str(i), img_bin)
+    cv2.waitKey()
+    cv2.destroyAllWindows()
+
+
+def main():
+    for i in range(3, 5):
+        find_eyes(i)
 
 
 main()
