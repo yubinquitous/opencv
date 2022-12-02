@@ -29,9 +29,9 @@ def find_eyes(i):
     gray = cv2.addWeighted(gray, 1 + alpha, blur, -alpha, 0)
 
     # adaptive thresholding
-    gray = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 19, 3)
+    gray = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 17, 3)
     # # bilateral filter
-    gray = cv2.bilateralFilter(gray, -3, 20, 5)
+    gray = cv2.bilateralFilter(gray, -3, 19, 5)
 
     contours, _ = cv2.findContours(gray, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
@@ -54,8 +54,8 @@ def find_eyes(i):
             area = cv2.contourArea(pts)
             ratio = 4. * math.pi * area / (length * length)
 
-            if ratio > 0.835:
-                # circles[count] += 1
+            if ratio > 0.836:
+                circles[count] += 1
                 set_label(src, pts, 'CIR')  # test
     circles.sort()
     for j in circles:
@@ -69,7 +69,7 @@ def find_eyes(i):
 
 
 def main():
-    find_eyes(15)
+    find_eyes(16)
 
 
 main()
