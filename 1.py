@@ -1,5 +1,6 @@
-import cv2 as cv2
 import math as math
+
+import cv2 as cv2
 
 
 def setLabel(img, pts, label):
@@ -11,7 +12,7 @@ def setLabel(img, pts, label):
 
 
 def main():
-    src = cv2.imread('images/dice7.png', cv2.IMREAD_GRAYSCALE)
+    src = cv2.imread('images/dice5.png', cv2.IMREAD_GRAYSCALE)
 
     if src is None:
         print('Image load failed!')
