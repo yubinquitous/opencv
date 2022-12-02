@@ -1,4 +1,5 @@
 import math as math
+
 import cv2 as cv2
 
 
@@ -19,17 +20,25 @@ def find_eyes(i):
         return
 
     gray = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
-    # 양방향
-    blur = cv2.bilateralFilter(gray, 9, 75, 75)
-    gray = cv2.GaussianBlur(gray, (3, 3), 1)
-    img_bin = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2)
-    img_bin = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2)
-    contours, _ = cv2.findContours(img_bin, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
+    # gray = cv2.blur(gray, (3, 3))
+    # # # bilateral filter
+    # gray = cv2.bilateralFilter(gray, -1, 10, 5)
+    # # unsharp mask
+    alpha = 0.5
+    blur = cv2.GaussianBlur(gray, (0, 0), 5)
+    gray = cv2.addWeighted(gray, 1 + alpha, blur, -alpha, 0)
+
+    # adaptive thresholding
+    gray = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 19, 3)
+    # # bilateral filter
+    gray = cv2.bilateralFilter(gray, -3, 20, 5)
+
+    contours, _ = cv2.findContours(gray, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
 
     count = -1
     circles = []
     for pts in contours:
-        if cv2.contourArea(pts) < 40:
+        if cv2.contourArea(pts) < 100:
             continue
 
         approx = cv2.approxPolyDP(pts, cv2.arcLength(pts, True) * 0.02, True)
@@ -39,12 +48,13 @@ def find_eyes(i):
         if vtc == 4:
             count += 1
             circles.append(0)
+            set_label(src, pts, 'RECT')  # test
         else:
             length = cv2.arcLength(pts, True)
             area = cv2.contourArea(pts)
             ratio = 4. * math.pi * area / (length * length)
 
-            if ratio > 0.8:
+            if ratio > 0.835:
                 # circles[count] += 1
                 set_label(src, pts, 'CIR')  # test
     circles.sort()
@@ -53,14 +63,13 @@ def find_eyes(i):
             print(j)
 
     cv2.imshow('src' + str(i), src)
-    cv2.imshow('img_bin' + str(i), img_bin)
+    cv2.imshow('gray' + str(i), gray)
     cv2.waitKey()
     cv2.destroyAllWindows()
 
 
 def main():
-    for i in range(1, 8):
-        find_eyes(i)
+    find_eyes(15)
 
 
 main()
