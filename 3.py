@@ -3,14 +3,6 @@ import math as math
 import cv2 as cv2
 
 
-def set_label(img, pts, label):
-    (x, y, w, h) = cv2.boundingRect(pts)
-    pt1 = (x, y)
-    pt2 = (x + w, y + h)
-    cv2.rectangle(img, pt1, pt2, (255, 255, 0), 1)
-    cv2.putText(img, label, pt1, cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 255))
-
-
 def find_eyes(i):
     file_name = 'images/case3/img3_' + str(i) + '.png'
     src = cv2.imread(file_name, cv2.IMREAD_COLOR)
@@ -46,7 +38,6 @@ def find_eyes(i):
 
             if ratio > 0.85:
                 circles[count] += 1
-                set_label(src, pts, 'CIR')  # test
 
     circles.sort()
     for j in circles:
@@ -55,6 +46,8 @@ def find_eyes(i):
 
 
 def main():
+    find_eyes(1)
+    print('----------------')
     find_eyes(2)
 
 

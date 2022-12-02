@@ -3,8 +3,9 @@ import math as math
 import cv2 as cv2
 
 
-def main():
-    src = cv2.imread('images/case5/img5_1.png', cv2.IMREAD_COLOR)
+def find_eyes(i):
+    file_name = 'images/case5/img5_' + str(i) + '.png'
+    src = cv2.imread(file_name, cv2.IMREAD_COLOR)
     if src is None:
         print('Image load failed!')
         return
@@ -43,6 +44,11 @@ def main():
                 count += 1
 
     print(count)
+
+
+def main():
+    for i in range(1, 10):
+        find_eyes(i)
 
 
 main()
