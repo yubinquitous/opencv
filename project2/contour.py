@@ -1,9 +1,8 @@
 import math as math
-
 import cv2 as cv2
 
 
-def setLabel(img, pts, label):
+def set_label(img, pts, label):
     (x, y, w, h) = cv2.boundingRect(pts)
     pt1 = (x, y)
     pt2 = (x + w, y + h)
@@ -36,14 +35,14 @@ def main():
         vtc = len(approx)
 
         if vtc == 4:
-            setLabel(src, pts, 'RECT')
+            set_label(src, pts, 'RECT')
         else:
             length = cv2.arcLength(pts, True)
             area = cv2.contourArea(pts)
             ratio = 4. * math.pi * area / (length * length)
 
             if ratio > 0.85:
-                setLabel(src, pts, 'CIR')
+                set_label(src, pts, 'CIR')
 
     cv2.imshow('src', src)
     cv2.waitKey()
